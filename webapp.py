@@ -1,4 +1,5 @@
-import joblib
+#import joblib
+import pickle
 import numpy as np
 from flask import Flask, request, render_template
 app = Flask(__name__)
@@ -10,7 +11,8 @@ def home():
 @app.route('/predict', methods=['POST'])
 def predict():
     ''' For rendering result in GUI'''
-    model = joblib.load('heart_disease_predictor.ml')
+    model = pickle.load(open('heart_disease_predictor.ml', 'rb'))
+    #model = joblib.load('heart_disease_predictor.ml')
     int_features = [x for x in request.form.values()]
     final_features = [np.array(int_features)]
     status = model.predict(final_features)
