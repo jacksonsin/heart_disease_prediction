@@ -18,19 +18,19 @@
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{url_for('predict')}}"method="post">
-    	<input type="text" name="age" placeholder="Age" required="required" /><br>
-        <input type="text" name="gender" placeholder="Gender" required="required" /><br>
-		<input type="text" name="cp" placeholder="CP" required="required" /><br>
-		<input type="text" name="trestbps" placeholder="Trestbps" required="required" /><br>
-		<input type="text" name="chol" placeholder="Chol" required="required" /><br>
-		<input type="text" name="fbs" placeholder="Fbs" required="required" /><br>
-		<input type="text" name="restecg" placeholder="RestECG" required="required" /><br>
-		<input type="text" name="thalach" placeholder="Thalach" required="required" /><br>
-		<input type="text" name="exang" placeholder="Exang" required="required" /><br>
-		<input type="text" name="oldpeak" placeholder="Oldpeak" required="required" /><br>
-		<input type="text" name="slope" placeholder="Slope" required="required" /><br>
-		<input type="text" name="ca" placeholder="CA" required="required" /><br>
-		<input type="text" name="thal" placeholder="Thal" required="required" /><br>               
+    	<input type="text" name="age" placeholder="Age" required="required" /> Input value between 29-73<br>
+        <input type="text" name="gender" placeholder="Gender" required="required" /> Male 1, Female 0<br>
+		<input type="text" name="cp" placeholder="CP" required="required" /> Chest pain type: Input value between 0-3<br>
+		<input type="text" name="trestbps" placeholder="Trestbps" required="required" /> Resting blood pressure: Input value between 94-200<br>
+		<input type="text" name="chol" placeholder="Chol" required="required" /> Serum cholestoral in mg/dl: 126-563<br>
+		<input type="text" name="fbs" placeholder="Fbs" required="required" /> Fasting blood sugar > 120 mg/dl: 0-1<br>
+		<input type="text" name="restecg" placeholder="RestECG" required="required" /> Resting electrocardiographic results: 0-2<br>
+		<input type="text" name="thalach" placeholder="Thalach" required="required" /> Maximum heart rate achieved: 71-202<br>
+		<input type="text" name="exang" placeholder="Exang" required="required" /> Exercise induced angina: 0-1<br>
+		<input type="text" name="oldpeak" placeholder="Oldpeak" required="required" /> Oldpeak = ST depression induced by exercise relative to rest: 0-6.2<br>
+		<input type="text" name="slope" placeholder="Slope" required="required" /> the slope of the peak exercise ST segment: 0-2<br>
+		<input type="text" name="ca" placeholder="CA" required="required" /> Number of major vessels (0-3) colored by flourosopy <br>
+		<input type="text" name="thal" placeholder="Thal" required="required" /> Thal: 3 = normal; 6 = fixed defect; 7 = reversable defect<br>               
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
