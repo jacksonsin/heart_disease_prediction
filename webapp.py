@@ -15,8 +15,7 @@ def predict():
     int_features = [x for x in request.form.values()]
     final_features = [np.array(int_features)]
     status = model.predict(final_features)
-    return render_template('index.html', response_status=status[0])
-#    return str(outcome(status[0]))
+    return outcome(status[0])
 
 def outcome(status):
     if status == '1':
